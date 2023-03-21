@@ -1,1 +1,1 @@
-### Pokedex ultilizando a PokéAPI test
+### Pokedex ultilizando a PokéAPI teste
