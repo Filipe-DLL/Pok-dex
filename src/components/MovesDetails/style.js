@@ -1,21 +1,31 @@
 import styled from 'styled-components';
 
-export const UlAbilities = styled.ul`
-    border: solid 1px wheat;
+export const UlMoves = styled.ul`
+    /* border: solid 1px wheat; */
 
-    max-width: 50%;
-    height: auto;
+    width: 100%;
     padding: 10px;
     
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 
-    overflow-y: hidden;
     h1{
+        display: flex;
+        justify-content: center;
+        flex-basis: 100%;
         font-size: xx-large;
     }
 
     li{
+        text-transform: capitalize;
         font-size: medium;
+        min-width: 120px;
+        max-width: 33%;
+        flex-basis: 33%;
+    }
+
+    @media (max-width: 500px) {
+    justify-content: center;
     }
 `

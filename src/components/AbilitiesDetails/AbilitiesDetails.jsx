@@ -4,8 +4,6 @@ import { ContainerAbilities } from "./style";
 
 export function AbilitiesDetails(props) {
 
-    console.log(props.props, 'props');
-
     const [abilities, setAbilities] = useState([])
 
     useEffect(() => {
@@ -19,7 +17,6 @@ export function AbilitiesDetails(props) {
     return (
         <ContainerAbilities>
             <h1>Abilities:</h1>
-            {console.log(abilities, 'Abilities')}
             {abilities.map((item) => (
                 <div key={item.data.name}>
                     <h2>

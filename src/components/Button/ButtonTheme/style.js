@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 export const ButtonContainer = styled.div`
-    margin: 50px 0 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+align-self: flex-end;
+margin: 0 10px;
+padding: 10px;
+border-radius: 10px;
 `
-
 export const StyledButton = styled.button`
+    background: ${props => props.theme.background};
+    color: ${props => props.theme.color};
+
     height: 30px;
-    width: 10%;
-    min-width: 150px;
+    width: 100%;
+    min-width: 50px;
     border-radius: 15px;
     cursor: pointer;
-    background-color: #fff;
-    color: #000;
     transition: all ease-out 0.3s;
 
     &:hover{

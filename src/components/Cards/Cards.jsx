@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Button } from "../Button/Button";
+import { ButtonCarregarMais } from "../Button/ButtonLoadMore/ButtonLoadMore";
 import { Card } from "../Card/Card";
 
 export function Cards() {
@@ -9,7 +9,7 @@ export function Cards() {
     const [cont, setCont] = useState(10)
 
     function carregarMais() {
-        setCont((cont + 10))
+        setCont((cont + 100))
     }
 
     useEffect(() => {
@@ -23,11 +23,10 @@ export function Cards() {
         getPokemons(cont)
     }, [cont])
 
-
     return (
-        <>
-            <Card pokemons={pokemons} ></Card>
-            <Button carregarMais={carregarMais} />
-        </>
+        <div>
+            <Card pokemons={pokemons} />
+            <ButtonCarregarMais carregarMais={carregarMais} />
+        </div>
     )
 }

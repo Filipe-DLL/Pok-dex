@@ -1,17 +1,22 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { AbilitiesDetails } from '../../components/AbilitiesDetails/AbilitiesDetails';
 import { MovesDetails } from '../../components/MovesDetails/MovesDetails';
-import { Container, PokemonDetails, PokemonHeader, PokemonSection } from './style';
+import { PokemonDetails } from '../../components/PokemonDetails/PokemonDetails';
+import { BackButton, Container, DetailsCard, PokemonHeader, PokemonSection } from './style';
+import { FaAngleLeft } from 'react-icons/fa'
+import { ThemeContext } from '../../context/theme-context';
+import { ButtonTheme } from '../../components/Button/ButtonTheme/ButtonTheme';
 
 export function CardDetails() {
-  
+
   const { id } = useParams()
-  
+
   const [pokemon, setPokemon] = useState([])
   const [abilities, setAbilities] = useState([])
   const [moves, setMoves] = useState([])
+  const { theme, temaAnterior } = useContext(ThemeContext)
 
   useEffect(() => {
     function getPokemon() {
@@ -25,33 +30,30 @@ export function CardDetails() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-
-
-
-
-  // console.log(abilities, 'habilidades')
-  // console.log(moves, 'movimentos')
-
   return (
-    <PokemonDetails>
-      {pokemon.data && (
-        <Container>
-          {console.log(pokemon, 'pokemon')}
-          {console.log(pokemon.data.types, 'types')}
+    <DetailsCard theme={theme}>
 
+      {pokemon.data && (
+
+        <Container>
+          <BackButton >
+            <Link to={'/'}>
+              <FaAngleLeft style={{color: `${temaAnterior.background}`,}} />
+            </Link>
+          </BackButton>
+            <ButtonTheme />
           <PokemonHeader>
-            <img src={pokemon.data.sprites.front_default} alt={`imagem do ${pokemon.data.name}`} />
-            <h1>{pokemon.data.name}</h1>
-            <h2>
-              {'Type:' + pokemon.data.types.map(item => (' ' + item.type.name))}
-            </h2>
+            <PokemonDetails props={pokemon.data} />
           </PokemonHeader>
-          <PokemonSection>
-            <AbilitiesDetails props={abilities}/>
-            <MovesDetails props={moves}/>
-          </PokemonSection>
+          <div>
+            <PokemonSection>
+              <AbilitiesDetails props={abilities} />
+              <MovesDetails props={moves} />
+            </PokemonSection>
+          </div>
         </Container>
+
       )}
-    </PokemonDetails>
+    </DetailsCard>
   )
 }

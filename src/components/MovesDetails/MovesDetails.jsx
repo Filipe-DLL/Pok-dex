@@ -1,10 +1,8 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { UlAbilities } from "./style";
+import { UlMoves } from "./style";
 
 export function MovesDetails(props) {
-
-    console.log(props.props, 'props');
 
     const [moves, setMoves] = useState([])
 
@@ -16,16 +14,14 @@ export function MovesDetails(props) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-
     return (
-        <UlAbilities>
+        <UlMoves>
             <h1>Moves:</h1>
-            {console.log(moves, 'moves')}
             {moves.map((item) => (
                 <li key={item.data.name}>
-                    {'- '+ item.data.name}
+                    {'- ' + item.data.name}
                 </li>
             ))}
-        </UlAbilities>
+        </UlMoves>
     )
 }

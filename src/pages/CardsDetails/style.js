@@ -1,44 +1,82 @@
 import styled from "styled-components";
 
-export const PokemonDetails = styled.div`
+export const DetailsCard = styled.div`
+    /* border: solid 1px green; */
+    background: ${props => props.theme.background};
+     color: ${props => props.theme.color};
+/* 
+     min-height: 100vh;
+     min-width: 100vw; */
+
     width: 100%;
     height: 100%;
-    border: solid 1px green;
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
 `
 
 export const Container = styled.div`
-    border: solid 1px pink;
-    text-transform: capitalize;
+    /* border: solid 1px pink; */
+
+    padding: 20px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: space-evenly;
 `
 export const PokemonHeader = styled.div`
-    border: solid 1px red;
+    /* border: solid 1px red; */
+
     width: 100%;
     padding-bottom: 15px;
     text-transform: capitalize;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     flex-direction: column;
 
     img{
+        /* border: solid 1px yellow; */
+
         width: 300px;
-        border: solid 1px yellow;
     }
+    h1{
+        font-size: xx-large;
+        font-weight: bold;
+    }
+    h2{
+        font-size: large;
+     }
 `
 export const PokemonSection = styled.div`
-    border: solid 1px brown;
+    /* border: solid 1px brown; */
+    
     width: 100%;
-    padding: 15PX;
+    padding: 15px;
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
-    gap: 10%;
+    gap: 5%;
+
+    @media (max-width: 500px) {
+    flex-direction: column;
+    }
+`
+
+export const BackButton = styled.div`
+    /* color: ${props => props.theme.color}; */
+    /* background-color: red; */
+
+    font-size: 50px;
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    transition: all ease-out 0.3s;
+    
+    
+    &:hover{
+        transform: scale(1.12);
+        opacity: 0.7;
+    }
 `
