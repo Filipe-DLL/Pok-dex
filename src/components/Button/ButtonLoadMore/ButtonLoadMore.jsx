@@ -5,10 +5,7 @@ import { ButtonContainer, StyledButton } from "./style"
 export function ButtonCarregarMais(props) {
 
     const { temaAnterior } = useContext(ThemeContext)
-
-    // console.log(theme, 'ButtonMore')
-    console.log(temaAnterior, 'ta');
-
+    
     let cont = 10
 
     function handleClick() {

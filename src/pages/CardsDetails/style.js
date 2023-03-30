@@ -3,13 +3,9 @@ import styled from "styled-components";
 export const DetailsCard = styled.div`
     /* border: solid 1px green; */
     background: ${props => props.theme.background};
-     color: ${props => props.theme.color};
-/* 
-     min-height: 100vh;
-     min-width: 100vw; */
+    color: ${props => props.theme.color};
 
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,7 +48,7 @@ export const PokemonSection = styled.div`
     /* border: solid 1px brown; */
     
     width: 100%;
-    padding: 15px;
+    /* padding: 15px; */
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -65,8 +61,7 @@ export const PokemonSection = styled.div`
 `
 
 export const BackButton = styled.div`
-    /* color: ${props => props.theme.color}; */
-    /* background-color: red; */
+    color: ${props => props.theme.color};
 
     font-size: 50px;
     position: absolute;

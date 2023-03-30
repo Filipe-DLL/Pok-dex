@@ -1,5 +1,4 @@
 export function PokemonDetails(props) {
-    console.log(props, 'xxx')
 
     return (
         <>

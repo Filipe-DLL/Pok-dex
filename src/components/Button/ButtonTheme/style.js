@@ -11,7 +11,7 @@ export const StyledButton = styled.button`
     color: ${props => props.theme.color};
 
     height: 30px;
-    width: 100%;
+    width: 60px;
     min-width: 50px;
     border-radius: 15px;
     cursor: pointer;

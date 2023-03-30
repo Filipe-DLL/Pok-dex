@@ -16,7 +16,7 @@ export function Cards() {
         function getPokemons(cont) {
             let linkList = []
             for (let i = 1; i <= cont; i++) {
-                linkList.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
+            linkList.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
             }
             axios.all(linkList.map(link => axios.get(link))).then(response => setPokemons(response))
         }
