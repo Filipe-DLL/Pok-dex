@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
-export const Label = styled.label`
-   font-size: x-large;
+export const Container = styled.div`
+   gap: 6px;
+   font-size: 23px;
    display: flex;
    align-items: center;
    justify-content: center;
-   gap: 6px;
 `
+
 export const Input = styled.input`
    border-radius: 10px;
    padding: 3px;

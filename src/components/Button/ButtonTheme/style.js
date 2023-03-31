@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const ButtonContainer = styled.div`
-align-self: flex-end;
-margin: 0 10px;
-padding: 10px;
-border-radius: 10px;
+    align-self: flex-end;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 10px;
 `
 export const StyledButton = styled.button`
     background: ${props => props.theme.background};
