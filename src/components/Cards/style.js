@@ -19,10 +19,17 @@ export const Li = styled.li`
     align-items: center;
     justify-content: center;
 
+    
     a{
         color: ${props => props.theme.color};
         cursor: pointer;
         text-transform: capitalize;
         text-align: center;
+    }
+    img{
+        transition: all 0.5s;
+    }
+    img:hover{
+        filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     }
 `

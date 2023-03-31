@@ -15,11 +15,11 @@ export const ThemeContext = createContext({})
 
 export const ThemeProvider = (props) => {
 
-    const [ theme, setTheme ] = useState(themes.dark)
+    const [theme, setTheme] = useState(themes.dark)
     const [temaAnterior, setTemaAnterior] = useState([theme])
 
-    return(
-        <ThemeContext.Provider value={{theme, setTheme, temaAnterior, setTemaAnterior}}>
+    return (
+        <ThemeContext.Provider value={{ theme, setTheme, temaAnterior, setTemaAnterior }}>
             {props.children}
         </ThemeContext.Provider>
     )

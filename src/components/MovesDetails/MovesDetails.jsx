@@ -7,12 +7,13 @@ export function MovesDetails(props) {
     const [moves, setMoves] = useState([])
 
     useEffect(() => {
-        function getMoves() {
-            axios.all(props.props.map(item => axios.get(item.move.url))).then(response => setMoves(response))
-        }
         getMoves()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
+    
+    function getMoves() {
+        axios.all(props.props.map(item => axios.get(item.move.url))).then(response => setMoves(response))
+    }
 
     return (
         <UlMoves>

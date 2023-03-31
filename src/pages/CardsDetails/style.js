@@ -6,6 +6,7 @@ export const DetailsCard = styled.div`
     color: ${props => props.theme.color};
 
     max-width: 100%;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +17,6 @@ export const Container = styled.div`
 
     padding: 20px;
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
 `
