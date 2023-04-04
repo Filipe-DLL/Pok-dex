@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const ButtonContainer = styled.div`
-    margin: 50px 0 10px 0;
+    margin: 30px 0 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
 `
 
 export const StyledButton = styled.button`
-    background: ${props => props.theme.background};
-    color: ${props => props.theme.color};
+    background: ${props => props.theme.primary};
+    color: ${props => props.theme.textColorSecondary};
 
     height: 30px;
     width: 10%;

@@ -1,3 +1,7 @@
 p{
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    
+    background: linear-gradient(to bottom, #00f 0%, #00f 50%, #f00 51%, #f00 100%);
+    
+    theme.textColorPrimary
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3);
 }

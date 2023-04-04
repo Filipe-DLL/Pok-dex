@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const Lista = styled.ul`
     /* border: solid 1px red; */
@@ -10,18 +10,25 @@ export const Lista = styled.ul`
 `
 
 export const Li = styled.li`
-    /* border: solid 1px blue; */
+background: linear-gradient(to bottom, #3f3f 25%, #fefe 50%, ${props => props.theme.secondary} 51%, ${props => props.theme.secondary} 100%);
     
     width: 200px;
+    margin: 4px 7.5px 15px 7.5px;
+    border-radius: 16px;
     display: flex;
     flex-direction: row;
-    flex-basis: 19%;
+    flex-basis: 18%;
     align-items: center;
     justify-content: center;
-
+    
+    box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
+    
+    /* background-color: ${props => props.theme.secondary}; */
     
     a{
-        color: ${props => props.theme.color};
+        color: ${props => props.theme.textColorPrimary};
+
+        padding-bottom: 20px;
         cursor: pointer;
         text-transform: capitalize;
         text-align: center;

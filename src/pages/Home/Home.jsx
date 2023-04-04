@@ -22,7 +22,7 @@ export function Home() {
     }, [cont])
 
     function getAllPokemons() {
-        axios.get('https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0').then(response => setAllPokemons(response))
+        axios.get('https://pokeapi.co/api/v2/pokemon?limit=150&offset=0').then(response => setAllPokemons(response))
     }
 
     function getPokemons(cont) {
@@ -50,6 +50,10 @@ export function Home() {
     }
 
     function carregarMais() {
+        if (cont >= 150) {
+            setCont((151))
+            return
+        }
         setCont((cont + 10))
     }
 

@@ -40,7 +40,7 @@ export function CardDetails() {
         <Container>
           <BackButton >
             <Link to={'/'}>
-              <FaAngleLeft style={{ color: `${temaAnterior.background}` }} />
+              <FaAngleLeft style={{ color: `${temaAnterior.primary}` }} />
             </Link>
           </BackButton>
           <ButtonTheme />

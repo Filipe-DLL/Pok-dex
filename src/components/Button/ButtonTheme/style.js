@@ -7,8 +7,8 @@ export const ButtonContainer = styled.div`
     border-radius: 10px;
 `
 export const StyledButton = styled.button`
-    background: ${props => props.theme.background};
-    color: ${props => props.theme.color};
+    background: ${props => props.theme.primary};
+    color: ${props => props.theme.textColorSecondary};
 
     height: 30px;
     width: 60px;

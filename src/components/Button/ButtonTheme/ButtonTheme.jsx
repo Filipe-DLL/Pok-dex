@@ -1,10 +1,10 @@
 import { useContext } from "react"
-import { ThemeContext, themes } from "../../../context/theme-context"
+import { ThemeContext } from "../../../context/theme-context"
 import { ButtonContainer, StyledButton } from "./style"
 
 export function ButtonTheme() {
 
-    const { theme, setTheme,temaAnterior, setTemaAnterior } = useContext(ThemeContext)
+    const {themes, theme, setTheme, temaAnterior, setTemaAnterior } = useContext(ThemeContext)
 
     return (
         <ButtonContainer>
@@ -18,5 +18,3 @@ export function ButtonTheme() {
         </ButtonContainer>
     )
 }
-
-// style={{color:theme.color, background:theme.background}}

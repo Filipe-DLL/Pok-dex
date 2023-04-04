@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const DetailsCard = styled.div`
     /* border: solid 1px green; */
-    background: ${props => props.theme.background};
-    color: ${props => props.theme.color};
+    background: ${props => props.theme.primary};
+    color: ${props => props.theme.secondary};
 
     max-width: 100%;
     min-height: 100vh;
@@ -61,7 +61,7 @@ export const PokemonSection = styled.div`
 `
 
 export const BackButton = styled.div`
-    color: ${props => props.theme.color};
+    color: ${props => props.theme.secondary};
 
     font-size: 50px;
     position: absolute;

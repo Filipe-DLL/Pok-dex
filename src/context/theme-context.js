@@ -1,15 +1,6 @@
 import { createContext, useState } from "react";
 
-export const themes = {
-    dark: {
-        background: '#1F2632',
-        color: '#CEE3E9'
-    },
-    light: {
-        background: '#eee',
-        color: '#000'
-    }
-}
+import { themes } from "./themes";
 
 export const ThemeContext = createContext({})
 
@@ -19,7 +10,7 @@ export const ThemeProvider = (props) => {
     const [temaAnterior, setTemaAnterior] = useState([theme])
 
     return (
-        <ThemeContext.Provider value={{ theme, setTheme, temaAnterior, setTemaAnterior }}>
+        <ThemeContext.Provider value={{themes, theme, setTheme, temaAnterior, setTemaAnterior }}>
             {props.children}
         </ThemeContext.Provider>
     )

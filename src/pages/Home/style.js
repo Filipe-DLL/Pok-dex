@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.div`
-     background: ${props => props.theme.background};
-     color: ${props => props.theme.color};
+     background: ${props => props.theme.primary};
+     color: ${props => props.theme.secondary};
 
      min-height: 100vh;
      min-width: 100%;
