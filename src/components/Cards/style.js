@@ -11,7 +11,7 @@ export const Lista = styled.ul`
 
 export const Li = styled.li`
 background: linear-gradient(to bottom, #3f3f 25%, #fefe 50%, ${props => props.theme.secondary} 51%, ${props => props.theme.secondary} 100%);
-    
+ 
     width: 200px;
     margin: 4px 7.5px 15px 7.5px;
     border-radius: 16px;
