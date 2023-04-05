@@ -9,7 +9,7 @@ export const ButtonContainer = styled.div`
 
 export const StyledButton = styled.button`
     background: ${props => props.theme.primary};
-    color: ${props => props.theme.textColorSecondary};
+    color: ${props => props.theme.textColorPrimary};
 
     height: 30px;
     width: 10%;

@@ -5,6 +5,7 @@ import { Cards } from "../../components/Cards/Cards";
 import { SearchBar } from "../../components/SearchBar/SearchBar";
 import { ThemeContext } from "../../context/theme-context";
 import { Header, HomeContainer } from "./style";
+import { ButtonCarregarMais } from "../../components/Button/ButtonLoadMore/ButtonLoadMore";
 
 export function Home() {
 
@@ -65,7 +66,8 @@ export function Home() {
                         <SearchBar pokemonFilter={pokemonFilter} />
                         <ButtonTheme />
                     </Header>
-                    <Cards pokemons={pokemons} carregarMais={carregarMais} />
+                    <Cards pokemons={pokemons} />
+                    <ButtonCarregarMais carregarMais={carregarMais} />
                 </HomeContainer>
             )}
         </>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const DetailsCard = styled.div`
     /* border: solid 1px green; */
     background: ${props => props.theme.primary};
-    color: ${props => props.theme.secondary};
+    color: ${props => props.theme.textColorPrimary};
 
     max-width: 100%;
     min-height: 100vh;
@@ -57,21 +57,5 @@ export const PokemonSection = styled.div`
 
     @media (max-width: 500px) {
     flex-direction: column;
-    }
-`
-
-export const BackButton = styled.div`
-    color: ${props => props.theme.secondary};
-
-    font-size: 50px;
-    position: absolute;
-    color: white;
-    text-decoration: none;
-    transition: all ease-out 0.3s;
-    
-    
-    &:hover{
-        transform: scale(1.12);
-        opacity: 0.7;
     }
 `

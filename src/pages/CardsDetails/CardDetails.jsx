@@ -1,17 +1,17 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { AbilitiesDetails } from '../../components/AbilitiesDetails/AbilitiesDetails';
 import { MovesDetails } from '../../components/MovesDetails/MovesDetails';
 import { PokemonDetails } from '../../components/PokemonDetails/PokemonDetails';
-import { BackButton, Container, DetailsCard, PokemonHeader, PokemonSection } from './style';
-import { FaAngleLeft } from 'react-icons/fa'
+import { Container, DetailsCard, PokemonHeader, PokemonSection } from './style';
 import { ThemeContext } from '../../context/theme-context';
 import { ButtonTheme } from '../../components/Button/ButtonTheme/ButtonTheme';
+import BackButton from '../../components/Button/BackButton/BackButton';
 
 export function CardDetails() {
 
-  const { theme, temaAnterior } = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext)
 
   const { id } = useParams()
 
@@ -36,13 +36,8 @@ export function CardDetails() {
     <DetailsCard theme={theme}>
 
       {pokemon.data && (
-
         <Container>
-          <BackButton >
-            <Link to={'/'}>
-              <FaAngleLeft style={{ color: `${temaAnterior.primary}` }} />
-            </Link>
-          </BackButton>
+          <BackButton />
           <ButtonTheme />
           <PokemonHeader>
             <PokemonDetails props={pokemon.data} />

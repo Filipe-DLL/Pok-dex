@@ -6,13 +6,25 @@ export const Lista = styled.ul`
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 `
 
 export const Li = styled.li`
-background: linear-gradient(to bottom, #3f3f 25%, #fefe 50%, ${props => props.theme.secondary} 51%, ${props => props.theme.secondary} 100%);
- 
-    width: 200px;
+    
+    ${ props => props.theme.theme === 'dark' && `
+    background: linear-gradient(to bottom, ${props.themes.types[props.type]} 50%, ${props.themes.dark.secondary} 58%);
+    box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
+   `}
+
+    ${ props => props.theme.theme === 'light' && `
+    background: linear-gradient(to bottom, ${props.themes.types[props.type]} 50%, ${props.themes.light.secondary} 58%);
+    box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
+   `}
+
+    
+    /* max-width: 216px; */
+    height: 260px;
+    max-height: 260px;
     margin: 4px 7.5px 15px 7.5px;
     border-radius: 16px;
     display: flex;
@@ -20,20 +32,18 @@ background: linear-gradient(to bottom, #3f3f 25%, #fefe 50%, ${props => props.th
     flex-basis: 18%;
     align-items: center;
     justify-content: center;
-    
-    box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
-    
-    /* background-color: ${props => props.theme.secondary}; */
-    
+      
     a{
-        color: ${props => props.theme.textColorPrimary};
+        color: ${props => props.theme.textColorSecondary};
 
         padding-bottom: 20px;
-        cursor: pointer;
         text-transform: capitalize;
         text-align: center;
+        cursor: pointer;
     }
     img{
+        display: flex;
+        height: 180px;
         transition: all 0.5s;
     }
     img:hover{

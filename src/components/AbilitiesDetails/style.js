@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const ContainerAbilities = styled.div`
     /* border: solid 1px wheat; */
+    color: ${props => props.theme.textColorPrimary};
 
     min-width: 60%;
     height: 100%;
