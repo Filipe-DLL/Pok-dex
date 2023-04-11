@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+   color: ${props => props.theme.previousPrimary};
+
    gap: 6px;
    font-size: 23px;
    display: flex;

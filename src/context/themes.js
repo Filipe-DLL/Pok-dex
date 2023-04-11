@@ -4,14 +4,18 @@ export const themes = {
         primary: '#1f2632',
         secondary: '#E6E0E9',
         textColorPrimary: '#fff',
-        textColorSecondary: '#000'
+        textColorSecondary: '#000',
+        previousPrimary: '#FEF7FF;',
+        previousSecondary: '#E6E0E9',
     },
     light: {
         theme: 'light',
         primary: '#FEF7FF;',
         secondary: '#E6E0E9',
         textColorPrimary: '#000',
-        textColorSecondary: '#000'
+        textColorSecondary: '#000',
+        previousPrimary: '#1f2632',
+        previousSecondary: '#E6E0E9'
     },
     types: {
         normal:  '#b7b6a3',

@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 export const ButtonContainer = styled.div`
-    color: ${props => props.theme.secondary};
-
     font-size: 50px;
     position: absolute;
     color: white;
     text-decoration: none;
     transition: all ease-out 0.3s;
-    
+    left: 20px;
+
+    a{
+        color: ${props => props.theme.previousPrimary};
+    }
     
     &:hover{
         transform: scale(1.12);

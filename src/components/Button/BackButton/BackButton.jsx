@@ -6,16 +6,16 @@ import { Link } from 'react-router-dom'
 import { ThemeContext } from '../../../context/theme-context'
 import { ButtonContainer } from "./style"
 
-export default function BackButton() {
+export function BackButton() {
 
     const { theme } = useContext(ThemeContext)
 
     return (
-        <ButtonContainer>
+        <ButtonContainer theme={theme}>
             <Link to={'/'}>
-                <FaAngleLeft style={{ color: `${theme.textColorPrimary}` }} />
+                <FaAngleLeft />
             </Link>
-        </ButtonContainer>
+        </ButtonContainer >
     )
 }
 
