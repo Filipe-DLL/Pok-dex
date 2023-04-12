@@ -20,7 +20,7 @@ export function MovesDetails(props) {
             <h1>Moves:</h1>
             {moves.map((item) => (
                 <li key={item.data.name}>
-                    {'- ' + item.data.name}
+                    {item.data.name}
                 </li>
             ))}
         </UlMoves>

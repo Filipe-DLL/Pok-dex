@@ -21,7 +21,7 @@ export function AbilitiesDetails(props) {
             {abilities.map((item) => (
                 <div key={item.data.name}>
                     <h2>
-                        {'- ' + item.data.name}
+                        {item.data.name}
                     </h2>
                     <p>
                         {item.data.effect_entries[1].effect}

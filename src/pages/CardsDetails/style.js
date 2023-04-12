@@ -15,7 +15,6 @@ export const DetailsCard = styled.div`
 export const Container = styled.div`
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.63) 0%, rgba(0, 0, 0, 0.63) 100%),${props => props.types[props.pokemon.types[0].type.name]} ;
     background-blend-mode: soft-light, normal;
-    /* background: ${props => props.types[props.pokemon.types[0].type.name]}; */
     
     padding: 20px;
     width: 100%;
@@ -29,10 +28,12 @@ export const PokemonSection = styled.div`
     color: ${props => props.theme.textColorSecondary};
 
     width: 100%;
+    padding: 10px 40px;
+    text-align: justify;
     display: flex;
     flex-direction: column;
     align-content: center;
-    text-align: center;
+    text-align: justify;
     gap: 5%;
     border-radius: 30px;
     max-width: 800px;

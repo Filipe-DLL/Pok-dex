@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const UlMoves = styled.ul`
-    /* border: solid 1px wheat; */
-
     width: 100%;
     padding: 10px;
     
@@ -11,6 +9,7 @@ export const UlMoves = styled.ul`
     justify-content: space-evenly;
 
     h1{
+        color: #565656;
         display: flex;
         justify-content: center;
         flex-basis: 100%;
@@ -20,6 +19,7 @@ export const UlMoves = styled.ul`
     li{
         text-transform: capitalize;
         font-size: medium;
+        text-align: center;
         min-width: 120px;
         max-width: 33%;
         flex-basis: 33%;

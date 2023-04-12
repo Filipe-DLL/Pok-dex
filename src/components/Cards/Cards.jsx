@@ -11,7 +11,7 @@ export function Cards(props) {
     return (
         <div>
 
-            <Lista>
+            <Lista pokemonsLength={props.pokemons.length}>
                 {props.pokemons.map((pokemon) => (
                     <Li key={pokemon.data.name} 
                     themes={themes} 

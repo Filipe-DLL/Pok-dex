@@ -1,12 +1,11 @@
 import styled from "styled-components"
 
 export const Lista = styled.ul`
-    /* border: solid 1px red; */
-    width: 100%;
+    width: 100vw;
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: ${props => props.pokemonsLength < 5? 'center; gap:4%;': 'space-evenly;' };
 `
 
 export const Li = styled.li`
@@ -21,8 +20,6 @@ export const Li = styled.li`
     box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
    `}
 
-    
-    /* max-width: 216px; */
     height: 260px;
     max-height: 260px;
     margin: 4px 7.5px 15px 7.5px;
@@ -32,7 +29,7 @@ export const Li = styled.li`
     flex-basis: 18%;
     align-items: center;
     justify-content: center;
-      
+   
     a{
         color: ${props => props.theme.textColorSecondary};
 
