@@ -1,11 +1,12 @@
 import styled from "styled-components"
 
 export const Lista = styled.ul`
-    width: 100vw;
+    width: 98vw;
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: ${props => props.pokemonsLength < 5? 'center; gap:4%;': 'space-evenly;' };
+    justify-content: center;
+    gap: 0.8%;
 `
 
 export const Li = styled.li`

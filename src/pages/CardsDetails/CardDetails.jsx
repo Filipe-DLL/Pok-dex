@@ -1,10 +1,11 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
-import { Container, DetailsCard, PokemonSection } from './style';
+import { Container, DetailsCard, PokemonSection, StyledTabList } from './style';
+import { Tab, TabPanel, Tabs } from 'react-tabs';
 import { useParams } from 'react-router-dom';
 import { AbilitiesDetails } from '../../components/AbilitiesDetails/AbilitiesDetails';
-import { MovesDetails } from '../../components/MovesDetails/MovesDetails';
 import { PokemonDetails } from '../../components/PokemonDetails/PokemonDetails';
+import { MovesDetails } from '../../components/MovesDetails/MovesDetails';
 import { ThemeContext } from '../../context/theme-context';
 import { ButtonTheme } from '../../components/Button/ButtonTheme/ButtonTheme';
 import { BackButton } from '../../components/Button/BackButton/BackButton';
@@ -41,8 +42,19 @@ export function CardDetails() {
           <ButtonTheme />
           <PokemonDetails props={pokemon.data} />
           <PokemonSection theme={theme} themes={themes}>
-            <AbilitiesDetails props={abilities} />
-            <MovesDetails props={moves} />
+            <Tabs>
+              <StyledTabList theme={theme}>
+                <Tab>Abilities</Tab>
+                <Tab>Moves</Tab>
+              </StyledTabList>
+        
+              <TabPanel>
+                <AbilitiesDetails props={abilities} />
+              </TabPanel>
+              <TabPanel>
+                <MovesDetails props={moves} />
+              </TabPanel>
+            </Tabs>
           </PokemonSection>
         </Container>
 

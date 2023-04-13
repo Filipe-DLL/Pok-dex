@@ -1,3 +1,4 @@
+import { TabList } from 'react-tabs';
 import styled from "styled-components";
 
 export const DetailsCard = styled.div`
@@ -17,6 +18,7 @@ export const Container = styled.div`
     background-blend-mode: soft-light, normal;
     
     padding: 20px;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -28,7 +30,6 @@ export const PokemonSection = styled.div`
     color: ${props => props.theme.textColorSecondary};
 
     width: 100%;
-    padding: 10px 40px;
     text-align: justify;
     display: flex;
     flex-direction: column;
@@ -45,3 +46,37 @@ export const PokemonSection = styled.div`
     flex-direction: column;
     }
 `
+
+export const StyledTabList = styled(TabList)`
+    font-size: x-large;
+    font-weight: 600;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+        
+    color: #565656;
+    background-color: #FFFFFF;
+    
+    li{
+        width: 50%;
+        text-align:center;
+        padding: 10px;
+    }
+
+    li:first-child {
+        border-top-left-radius: 30px;
+    }
+
+    li:last-child {
+        border-top-right-radius: 30px;
+    }
+    
+    .react-tabs__tab--selected{                                  
+        background-color: #E6E0E9;
+    }
+`;

@@ -6,6 +6,7 @@ export const ContainerAbilities = styled.div`
     min-width: 60%;
     height: 100%;
     padding: 10px;
+    margin:10px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
