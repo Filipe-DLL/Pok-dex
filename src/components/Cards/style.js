@@ -1,7 +1,15 @@
 import styled from "styled-components"
 
+export const Container = styled.div`
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
 export const Lista = styled.ul`
     width: 98vw;
+    height: 100%;
 
     display: flex;
     flex-wrap: wrap;
@@ -22,7 +30,7 @@ export const Li = styled.li`
    `}
 
     height: 260px;
-    max-height: 260px;
+    max-height: 250px;
     margin: 4px 7.5px 15px 7.5px;
     border-radius: 16px;
     display: flex;

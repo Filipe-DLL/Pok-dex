@@ -60,18 +60,16 @@ export function Home() {
 
     return (
         <>
-            {pokemons && (
-                <HomeContainer theme={theme}>
-                    <Header >
-                        <div>
-                            <SearchBar pokemonFilter={pokemonFilter} />
-                            <ButtonTheme />
-                        </div>
-                    </Header>
-                    <Cards pokemons={pokemons} />
-                    <ButtonCarregarMais carregarMais={carregarMais} />
-                </HomeContainer>
-            )}
+            <HomeContainer theme={theme}>
+                <Header >
+                    <div>
+                        <SearchBar pokemonFilter={pokemonFilter} />
+                        <ButtonTheme />
+                    </div>
+                </Header>
+                <Cards pokemons={pokemons} />
+                <ButtonCarregarMais carregarMais={carregarMais} />
+            </HomeContainer>
         </>
     )
 }

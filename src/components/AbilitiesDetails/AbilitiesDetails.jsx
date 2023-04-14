@@ -10,7 +10,7 @@ export function AbilitiesDetails(props) {
         getMoves()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-    
+
     function getMoves() {
         axios.all(props.props.map(item => axios.get(item.ability.url))).then(response => setAbilities(response))
     }
@@ -20,12 +20,8 @@ export function AbilitiesDetails(props) {
             <h1>Abilities:</h1>
             {abilities.map((item) => (
                 <div key={item.data.name}>
-                    <h2>
-                        {item.data.name}
-                    </h2>
-                    <p>
-                        {item.data.effect_entries[1].effect}
-                    </p>
+                    <h2>{item.data.name}</h2>
+                    <p>{item.data.effect_entries[1].effect}</p>
                 </div>
             ))}
         </ContainerAbilities>

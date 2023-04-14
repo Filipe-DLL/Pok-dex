@@ -1,8 +1,7 @@
-import { TabList } from 'react-tabs';
+import { TabList, TabPanel } from 'react-tabs';
 import styled from "styled-components";
 
 export const DetailsCard = styled.div`
-    /* border: solid 1px green; */
     background: ${props => props.theme.primary};
     color: ${props => props.theme.textColorSecondary};
 
@@ -23,6 +22,13 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .react-tabs{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 400px;
+    }
 `
 
 export const PokemonSection = styled.div` 
@@ -30,14 +36,11 @@ export const PokemonSection = styled.div`
     color: ${props => props.theme.textColorSecondary};
 
     width: 100%;
-    text-align: justify;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+    max-width: 800px;
+    min-height: 400px;
     text-align: justify;
     gap: 5%;
     border-radius: 30px;
-    max-width: 800px;
     z-index: 1;
 
     box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
@@ -50,7 +53,7 @@ export const PokemonSection = styled.div`
 export const StyledTabList = styled(TabList)`
     font-size: x-large;
     font-weight: 600;
-    width: 100%;
+    min-width: 100%;
     
     display: flex;
     align-items: center;
@@ -59,11 +62,11 @@ export const StyledTabList = styled(TabList)`
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
         
-    color: #565656;
-    background-color: #FFFFFF;
+    color: #FEF7FF;
+    background-color: #3c3c3c;
     
     li{
-        width: 50%;
+        min-width: 50%;
         text-align:center;
         padding: 10px;
     }
@@ -78,5 +81,11 @@ export const StyledTabList = styled(TabList)`
     
     .react-tabs__tab--selected{                                  
         background-color: #E6E0E9;
+        color: #565656;
     }
 `;
+
+export const StyledTabPanel = styled(TabPanel)`
+  height: 100%;
+  flex-grow: 1;
+`

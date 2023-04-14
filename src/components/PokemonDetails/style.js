@@ -30,7 +30,7 @@ export const PokemonHeader = styled.div`
     h3{
         color: #565656;
         font-size: 28px;
-        font-weight: 500;
+        font-weight: 600;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;

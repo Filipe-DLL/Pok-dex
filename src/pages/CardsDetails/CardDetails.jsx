@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
-import { Container, DetailsCard, PokemonSection, StyledTabList } from './style';
-import { Tab, TabPanel, Tabs } from 'react-tabs';
+import { Container, DetailsCard, PokemonSection, StyledTabList, StyledTabPanel } from './style';
+import { Tab, Tabs } from 'react-tabs';
 import { useParams } from 'react-router-dom';
 import { AbilitiesDetails } from '../../components/AbilitiesDetails/AbilitiesDetails';
 import { PokemonDetails } from '../../components/PokemonDetails/PokemonDetails';
@@ -9,10 +9,13 @@ import { MovesDetails } from '../../components/MovesDetails/MovesDetails';
 import { ThemeContext } from '../../context/theme-context';
 import { ButtonTheme } from '../../components/Button/ButtonTheme/ButtonTheme';
 import { BackButton } from '../../components/Button/BackButton/BackButton';
+import { ClipLoader } from "react-spinners";
 
 export function CardDetails() {
 
   const { themes, theme } = useContext(ThemeContext)
+
+
 
   const { id } = useParams()
 
@@ -36,29 +39,33 @@ export function CardDetails() {
   return (
     <DetailsCard theme={theme}>
 
-      {pokemon.data && (
+      {pokemon.data ?
         <Container theme={theme} types={themes.types} pokemon={pokemon.data}>
           <BackButton />
           <ButtonTheme />
           <PokemonDetails props={pokemon.data} />
           <PokemonSection theme={theme} themes={themes}>
+
             <Tabs>
+
               <StyledTabList theme={theme}>
                 <Tab>Abilities</Tab>
                 <Tab>Moves</Tab>
               </StyledTabList>
-        
-              <TabPanel>
+
+              <StyledTabPanel>
                 <AbilitiesDetails props={abilities} />
-              </TabPanel>
-              <TabPanel>
+              </StyledTabPanel>
+              <StyledTabPanel>
                 <MovesDetails props={moves} />
-              </TabPanel>
+              </StyledTabPanel>
+
             </Tabs>
+
           </PokemonSection>
         </Container>
-
-      )}
+        : <ClipLoader color="#36d7b7" />
+      }
     </DetailsCard>
   )
 }
