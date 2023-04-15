@@ -15,15 +15,13 @@ export function Home() {
     const [pokemons, setPokemons] = useState([])
     const [cont, setCont] = useState(10)
 
-
-
     useEffect(() => {
         getAllPokemons()
         getPokemons(cont)
     }, [cont])
 
     function getAllPokemons() {
-        axios.get('https://pokeapi.co/api/v2/pokemon?limit=150&offset=0').then(response => setAllPokemons(response))
+        axios.get('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0').then(response => setAllPokemons(response))
     }
 
     function getPokemons(cont) {
@@ -43,11 +41,15 @@ export function Home() {
                     filteredPokemons.push(allPokemons.data.results[i])
                 }
             }
+            console.log(filteredPokemons,'for');
+            if (filteredPokemons === []) {
+            console.log(filteredPokemons,'if');
+            }
             axios.all(filteredPokemons.map(item => axios.get(item.url))).then(response => setPokemons(response))
         } else {
+            console.log('x');
             getPokemons(cont)
         }
-
     }
 
     function carregarMais() {

@@ -1,8 +1,11 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { ContainerAbilities } from "./style";
+import { ThemeContext } from "../../context/theme-context";
 
 export function AbilitiesDetails(props) {
+
+    const { theme } = useContext(ThemeContext)
 
     const [abilities, setAbilities] = useState([])
 
@@ -14,9 +17,9 @@ export function AbilitiesDetails(props) {
     function getMoves() {
         axios.all(props.props.map(item => axios.get(item.ability.url))).then(response => setAbilities(response))
     }
-
+    
     return (
-        <ContainerAbilities>
+        <ContainerAbilities theme={theme}>
             <h1>Abilities:</h1>
             {abilities.map((item) => (
                 <div key={item.data.name}>

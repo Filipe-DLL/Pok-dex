@@ -1,11 +1,13 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { UlMoves } from "./style";
+import { ThemeContext } from "../../context/theme-context";
 
 export function MovesDetails(props) {
 
-    const [moves, setMoves] = useState([])
+    const { theme } = useContext(ThemeContext)
 
+    const [moves, setMoves] = useState([])
 
     useEffect(() => {
         getMoves()
@@ -17,7 +19,7 @@ export function MovesDetails(props) {
     }
 
     return (
-        <UlMoves>
+        <UlMoves theme={theme}>
             <h1>Moves:</h1>
             {moves.map((item) => (
                 <li key={item.data.name}>

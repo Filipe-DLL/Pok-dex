@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const ContainerAbilities = styled.div`
-    color: ${props => props.theme.textColorPrimary};    
     
     min-width: 60%;
     height: 100%;
@@ -13,14 +12,14 @@ export const ContainerAbilities = styled.div`
     gap: 8px;
     
     h1{
-        color: #565656;
+        color: ${props => props.theme.textColorPreviousPrimary};
         font-size: xx-large;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     h2{
-        color: #565656;
+        color: ${props => props.theme.textColorPreviousPrimary};
         padding: 5px 0;
         text-transform: capitalize;
         display: flex;

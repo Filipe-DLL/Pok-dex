@@ -9,7 +9,7 @@ export const UlMoves = styled.ul`
     justify-content: space-evenly;
 
     h1{
-        color: #565656;
+        color: ${props => props.theme.textColorPreviousPrimary};
         display: flex;
         justify-content: center;
         flex-basis: 100%;

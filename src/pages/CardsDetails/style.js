@@ -14,8 +14,9 @@ export const DetailsCard = styled.div`
 
 export const Container = styled.div`
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.63) 0%, rgba(0, 0, 0, 0.63) 100%),${props => props.types[props.pokemon.types[0].type.name]} ;
+    background-attachment: fixed;
     background-blend-mode: soft-light, normal;
-    
+
     padding: 20px;
     min-height: 100vh;
     width: 100%;
@@ -32,8 +33,8 @@ export const Container = styled.div`
 `
 
 export const PokemonSection = styled.div` 
-    background: ${props => props.theme.secondary};
-    color: ${props => props.theme.textColorSecondary};
+    background: ${props => props.theme.previousPrimary};
+    color: ${props => props.theme.textColorPreviousPrimary};
 
     width: 100%;
     max-width: 800px;
@@ -61,14 +62,14 @@ export const StyledTabList = styled(TabList)`
     
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-        
-    color: #FEF7FF;
-    background-color: #3c3c3c;
-    
+            
     li{
         min-width: 50%;
         text-align:center;
         padding: 10px;
+        background-color: ${props => props.theme.primary};
+        color: ${props => props.theme.textColorPrimary};
+        border-bottom:7px solid ${props => props.theme.primary};
     }
 
     li:first-child {
@@ -80,12 +81,19 @@ export const StyledTabList = styled(TabList)`
     }
     
     .react-tabs__tab--selected{                                  
-        background-color: #E6E0E9;
-        color: #565656;
+        border-bottom:7px solid ${props => props.types[props.pokemon.types[0].type.name]};
     }
 `;
 
 export const StyledTabPanel = styled(TabPanel)`
-  height: 100%;
-  flex-grow: 1;
+    height: 100%;
+    flex-grow: 1;
+`;
+
+export const HeaderBar = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 `

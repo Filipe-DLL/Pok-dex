@@ -6,9 +6,10 @@ export const ButtonContainer = styled.div`
     padding: 10px;
     border-radius: 10px;
 `
+
 export const StyledButton = styled.button`
-    background: ${props => props.theme.primary};
-    color: ${props => props.theme.textColorPrimary};
+    background: ${props => props.theme.previousPrimary};
+    color: ${props => props.theme.textColorPreviousPrimary};
 
     font-size: 20px;
     height: 40px;

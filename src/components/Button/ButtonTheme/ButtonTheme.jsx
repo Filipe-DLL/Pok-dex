@@ -7,11 +7,11 @@ import { BsFillSunFill } from "react-icons/bs"
 
 export function ButtonTheme() {
 
-    const {themes, theme, setTheme, temaAnterior, setTemaAnterior } = useContext(ThemeContext)
+    const {themes, theme, setTheme, setTemaAnterior } = useContext(ThemeContext)
 
     return (
         <ButtonContainer>
-            <StyledButton theme={temaAnterior}
+            <StyledButton theme={theme}
                 onClick={() => {
                     setTemaAnterior(theme)
                     setTheme(theme === themes.light ? themes.dark : themes.light)

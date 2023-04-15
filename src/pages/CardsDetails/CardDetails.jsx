@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
-import { Container, DetailsCard, PokemonSection, StyledTabList, StyledTabPanel } from './style';
+import { Container, DetailsCard, HeaderBar, PokemonSection, StyledTabList, StyledTabPanel } from './style';
 import { Tab, Tabs } from 'react-tabs';
 import { useParams } from 'react-router-dom';
 import { AbilitiesDetails } from '../../components/AbilitiesDetails/AbilitiesDetails';
@@ -14,8 +14,6 @@ import { ClipLoader } from "react-spinners";
 export function CardDetails() {
 
   const { themes, theme } = useContext(ThemeContext)
-
-
 
   const { id } = useParams()
 
@@ -41,14 +39,16 @@ export function CardDetails() {
 
       {pokemon.data ?
         <Container theme={theme} types={themes.types} pokemon={pokemon.data}>
-          <BackButton />
-          <ButtonTheme />
+          <HeaderBar>
+            <BackButton />
+            <ButtonTheme />
+          </HeaderBar>
           <PokemonDetails props={pokemon.data} />
           <PokemonSection theme={theme} themes={themes}>
 
             <Tabs>
 
-              <StyledTabList theme={theme}>
+              <StyledTabList theme={theme} types={themes.types} pokemon={pokemon.data}>
                 <Tab>Abilities</Tab>
                 <Tab>Moves</Tab>
               </StyledTabList>

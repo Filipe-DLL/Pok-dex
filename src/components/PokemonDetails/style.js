@@ -28,7 +28,7 @@ export const PokemonHeader = styled.div`
         margin-bottom: -9px;
     }
     h3{
-        color: #565656;
+        color: ${props => props.theme.textColorSecondary};
         font-size: 28px;
         font-weight: 600;
         display: flex;
