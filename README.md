@@ -7,7 +7,6 @@
 Esse desafio faz parte do curso DevQuest, ele serve para simular um teste técnico que pode ser pedido em um processo seletivo de frontend.
 
 + O que é pra ser feito?
-
  * Criar uma Home (página inicial) de listagem de alguns pokemons, utilizando a api https://pokeapi.co/
   + A home deve apresentar uma listagem com 10 pokemons iniciais.
   + A home deve ter um botão **"Carregar mais"** abaixo dessa lista, que quando clicado deve buscar mais 10 pokemons e adicionar a listagem atual.
