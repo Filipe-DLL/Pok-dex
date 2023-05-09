@@ -23,7 +23,11 @@ Esse desafio faz parte do curso DevQuest, ele serve para simular um teste técni
       * descritivo da habilidade
       * Tipo do pokemon (type)
    
+<<<<<<< HEAD
     
+=======
+   
+>>>>>>> 41d00ebed7293e4adf53422e5a45d334301cd729
    Para realização deste desafio, deverão ser observados os seguintes requisitos
 + Requisitos técnicos
   * A aplicação deverá ser Single Page Application (SPA);
@@ -31,6 +35,10 @@ Esse desafio faz parte do curso DevQuest, ele serve para simular um teste técni
   * Utilizar Context API para criação do Theme Toggler (Alternador entre tema claro e escuro);
   *  Utilizar styled-components para estilização dos componentes;
   * Utilizar react-router-dom para a navegação entre as páginas;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 41d00ebed7293e4adf53422e5a45d334301cd729
 
 <!-- Descrição do seu projeto;
 Funcionalidades;
