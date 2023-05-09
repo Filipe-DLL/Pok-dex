@@ -27,10 +27,9 @@ Esse desafio faz parte do curso DevQuest, ele serve para simular um teste técni
      * descritivo da habilidade
      * Tipo do pokemon (type)
    
+   Para realização deste desafio, deverão ser observados os seguintes requisitos
    
   + Requisitos técnicos
-  
-   Para realização deste desafio, deverão ser observados os seguintes requisitos
    
    * A aplicação deverá ser Single Page Application (SPA);
    * Utilizar React.js para o desenvolvimento da aplicação;
