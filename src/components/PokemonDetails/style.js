@@ -35,6 +35,17 @@ export const PokemonHeader = styled.div`
         flex-direction: row;
         justify-content: flex-end;
     }
+    @media (max-width: 820px){
+        flex-direction: column;
+    }
+    @media (max-width: 440px){
+        h2{
+        font-size: 50px;
+        }
+        h3{
+        font-size: 18px;
+        }
+    }
 `
 export const BehindName = styled.h1`
     color: rgba(255, 255, 255, 0.18);
@@ -51,4 +62,9 @@ export const BehindName = styled.h1`
     z-index: 0;    
 
     overflow-x: hidden;
+
+    @media (max-width: 820px){
+        top: 20%;
+        height: auto;
+    }
 `

@@ -2,7 +2,7 @@
 
 <img  src="./public/pokemon.png" alt="imagem do nome 'Pokemon'"/>
 
-#### Descrição
+ #### Descrição
 
 Esse desafio faz parte do curso DevQuest, ele serve para simular um teste técnico que pode ser pedido em um processo seletivo de frontend.
 
