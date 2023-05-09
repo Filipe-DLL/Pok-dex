@@ -30,7 +30,6 @@ Esse desafio faz parte do curso DevQuest, ele serve para simular um teste técni
    Para realização deste desafio, deverão ser observados os seguintes requisitos
    
   + Requisitos técnicos
-   
    * A aplicação deverá ser Single Page Application (SPA);
    * Utilizar React.js para o desenvolvimento da aplicação;
    * Utilizar Context API para criação do Theme Toggler (Alternador entre tema claro e escuro);
