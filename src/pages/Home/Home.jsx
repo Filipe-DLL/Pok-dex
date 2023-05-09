@@ -65,6 +65,7 @@ export function Home() {
             <HomeContainer theme={theme}>
                 <Header >
                     <div>
+                        <h1>Pokedex</h1>
                         <SearchBar pokemonFilter={pokemonFilter} />
                         <ButtonTheme />
                     </div>
