@@ -1,8 +1,6 @@
 <h1 align="center"> Pokedex com PokéAPI </h1>
 
-<div align="center">
 <img  src="./public/pokemon.png" alt="imagem do nome 'Pokemon'"/>
-</div>
 
 #### Descrição do seu projeto
 
