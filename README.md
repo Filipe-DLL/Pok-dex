@@ -12,6 +12,7 @@ Esse desafio faz parte do curso DevQuest, ele serve para simular um teste técni
     + A home deve ter um botão **"Carregar mais"** abaixo dessa lista, que quando clicado deve buscar mais 10 pokemons e adicionar a listagem atual.
     + Essa listagem deve mostrar a imagem e nome de cada pokemon. Na listagem cada pokemon deve ser clicável e ao clicar o usuário deve poder acessar uma página interna desse pokemon
     + Essa home deve ter um botão para que o usuário possa alternar de cor entre tema claro e tema escuro **(light/dark)**
+    
   * Criar uma página interna de detalhe do pokemon.
     + Informações detalhadas, nessa página de detalhes devem aparecer as seguintes informações:
       * Imagem do pokemon
