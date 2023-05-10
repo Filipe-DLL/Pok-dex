@@ -13,8 +13,13 @@ export const Lista = styled.ul`
 
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
     gap: 0.8%;
+
+    @media (min-width: 1920px) {
+        max-width: 85vw;
+    }
 `
 
 export const Li = styled.li`
@@ -29,15 +34,29 @@ export const Li = styled.li`
     box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
    `}
 
-    height: 260px;
-    max-height: 250px;
+    width: 18%;
+    height: 240px;
+    max-width: 240px;
+    min-width: 240px;
+    min-height: 240px;
+
     margin: 4px 7.5px 15px 7.5px;
     border-radius: 16px;
     display: flex;
     flex-direction: row;
-    flex-basis: 18%;
     align-items: center;
     justify-content: center;
+    /* flex-basis: 250px; */
+
+    @media (min-width: 1920px) {
+        /* width: 13%;  */
+        max-width: 312px;
+        min-height: 312px;
+
+        /* max-width: 250px; */
+        /* min-width: 240px; */
+        /* min-height: 240px; */
+    }
    
     a{
         color: ${props => props.theme.textColorSecondary};

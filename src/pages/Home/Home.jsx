@@ -41,9 +41,9 @@ export function Home() {
                     filteredPokemons.push(allPokemons.data.results[i])
                 }
             }
-            console.log(filteredPokemons,'for');
+            console.log(filteredPokemons, 'for');
             if (filteredPokemons === []) {
-            console.log(filteredPokemons,'if');
+                console.log(filteredPokemons, 'if');
             }
             axios.all(filteredPokemons.map(item => axios.get(item.url))).then(response => setPokemons(response))
         } else {
@@ -64,8 +64,8 @@ export function Home() {
         <>
             <HomeContainer theme={theme}>
                 <Header >
+                    <img height={'50px'} src="pokemon.png" alt="POKEMON" />
                     <div>
-                        <h1>Pokedex</h1>
                         <SearchBar pokemonFilter={pokemonFilter} />
                         <ButtonTheme />
                     </div>

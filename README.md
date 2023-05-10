@@ -2,7 +2,50 @@
 
 <img  src="./public/pokemon.png" alt="imagem do nome 'Pokemon'"/>
 
- #### Descrição
+
+## Descrição
+Este projeto é uma Pokédex em que você pode procurar informações sobre diferentes Pokémons. Ele foi desenvolvido usando as tecnologias React, Axios, Styled-Components, React-Icons e Context API.
+
+## Funcionalidades
+Algumas das funcionalidades deste projeto incluem:
+
++ Exibição de 10 Pokémon na página inicial e possibilidade de carregar mais 10 usando um botão de "Carregar mais"
++ Alteração de tema entre light e dark usando Context API
++ Pesquisa de Pokémon por nome ou número da Pokédex
++ Visualização de informações sobre cada Pokémon, como tipos, habilidades e movimentos, em uma página individual
++ Navegação entre as páginas usando react-router-dom
+
+## Tecnologias utilizadas
++ React
++ Axios
++ Styled-Components
++ React-Icons
++ Context API
++ react-router-dom
+
+## Como executar o projeto localmente
+1. Clone o repositório:
+
+  `git clone https://github.com/seu-usuario/nome-do-repositorio.git`
+
+2. Instale as dependências do projeto:
+
+  `npm install`
+
+3. Inicie o servidor:
+
+  `npm start`
+
+4. Acesse a aplicação em seu navegador, no endereço http://localhost:3000.
+
+## Preview
+
+<img  src="./public/Animação.gif" alt="Gif da Pokedex"/>
+
+
+
+
+ <!-- ## Descrição
 
 Esse desafio faz parte do curso DevQuest, ele serve para simular um teste técnico que pode ser pedido em um processo seletivo de frontend.
 
@@ -29,20 +72,4 @@ Esse desafio faz parte do curso DevQuest, ele serve para simular um teste técni
   * Utilizar React.js para o desenvolvimento da aplicação;
   * Utilizar Context API para criação do Theme Toggler (Alternador entre tema claro e escuro);
   *  Utilizar styled-components para estilização dos componentes;
-  * Utilizar react-router-dom para a navegação entre as páginas;
-
-<!-- Descrição do seu projeto;
-Funcionalidades;
-Como os usuários podem utilizá-lo;
-
-Título e Imagem de capa;
-Badges;
-Índice;
-Descrição do Projeto;
-Status do Projeto;
-Funcionalidades e Demonstração da Aplicação;
-Acesso ao Projeto;
-Tecnologias utilizadas;
-Pessoas Contribuidoras;
-Pessoas Desenvolvedoras do Projeto;
-Licença. -->
+  * Utilizar react-router-dom para a navegação entre as páginas; -->

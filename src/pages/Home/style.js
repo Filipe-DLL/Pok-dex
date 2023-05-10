@@ -15,14 +15,22 @@ export const Header = styled.div`
      width: 100%;
      display: flex;
      align-items: center;
-     justify-content: flex-end;
+     justify-content: space-between;
      margin-right: 10px;
-     padding-top: 6px;
+     padding: 6px 0 6px 30px;
 
      div{
           display: flex;
           align-items: center;
           justify-content: center;
           gap: 10px;
+     }
+     @media (max-width: 450px) {
+          padding: 0;
+          gap: 5px;
+          margin-right: 0px;
+          div{
+               gap: 0px;
+          }
      }
 `
