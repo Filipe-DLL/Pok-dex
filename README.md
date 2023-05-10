@@ -39,8 +39,15 @@ Algumas das funcionalidades deste projeto incluem:
 4. Acesse a aplicação em seu navegador, no endereço http://localhost:3000.
 
 ## Preview
+#### Web
 
-<img  src="./public/Animação.gif" alt="Gif da Pokedex"/>
+<img  src="./public/Animação.gif" alt="Gif Web da Pokedex"/>
+
+
+#### Mobile
+
+<img  src="./public/Animação-Mobile.gif" alt="Gif Mobile da Pokedex"/>
+
 
 
 
