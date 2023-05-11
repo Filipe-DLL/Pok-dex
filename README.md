@@ -2,6 +2,8 @@
 
 <img  src="./public/pokemon.png" alt="imagem do nome 'Pokemon'"/>
 
+## Link para <a align="center" href="https://pokedex-topaz-omega.vercel.app/">Visualizar projeto</a>
+
 
 ## Descrição
 Este projeto é uma Pokédex em que você pode procurar informações sobre diferentes Pokémons. Ele foi desenvolvido usando as tecnologias React, Axios, Styled-Components, React-Icons e Context API.
