@@ -1,6 +1,6 @@
 <h1 align="center"> Pokedex com PokéAPI </h1>
 
-<img  src="./public/pokemon.png" alt="imagem do nome 'Pokemon'"/>
+<img  src="./src/assets/pokemon.png" alt="imagem do nome 'Pokemon'"/>
 
 ### Link para <a href="https://pokedex-topaz-omega.vercel.app/">Visualizar projeto</a>
 
@@ -10,7 +10,7 @@ Este projeto é uma Pokédex em que você pode procurar informações sobre dife
 
 ## Funcionalidades
 Algumas das funcionalidades deste projeto incluem:
-
+ 
 + Exibição de 10 Pokémon na página inicial e possibilidade de carregar mais 10 usando um botão de "Carregar mais"
 + Alteração de tema entre light e dark usando Context API
 + Pesquisa de Pokémon por nome ou número da Pokédex
@@ -43,9 +43,9 @@ Algumas das funcionalidades deste projeto incluem:
 ## Preview
 #### Web
 
-<img  src="./public/Animação.gif" alt="Gif Web da Pokedex"/>
+<img  src="./src/assets//Animação.gif" alt="Gif Web da Pokedex"/>
 
 
 #### Mobile
 
-<img  src="./public/Animação-Mobile.gif" alt="Gif Mobile da Pokedex"/>
+<img  src="./src/assets//Animação-Mobile.gif" alt="Gif Mobile da Pokedex"/>

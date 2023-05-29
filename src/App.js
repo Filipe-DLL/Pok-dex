@@ -1,6 +1,6 @@
 import './App.css';
 import { ThemeProvider } from './context/theme-context';
-import { AppRoutes } from './pages/routes/routes';
+import { AppRoutes } from './routes/routes';
 
 function App() {
   return (

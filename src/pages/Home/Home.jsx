@@ -6,6 +6,7 @@ import { SearchBar } from "../../components/SearchBar/SearchBar";
 import { ThemeContext } from "../../context/theme-context";
 import { Header, HomeContainer } from "./style";
 import { ButtonCarregarMais } from "../../components/Button/ButtonLoadMore/ButtonLoadMore";
+import ImgPokemon from "../../assets/pokemon.png"
 
 export function Home() {
 
@@ -64,7 +65,7 @@ export function Home() {
         <>
             <HomeContainer theme={theme}>
                 <Header >
-                    <img height={'50px'} src="pokemon.png" alt="POKEMON" />
+                    <img height={'50px'} src={ImgPokemon}alt="POKEMON" />
                     <div>
                         <SearchBar pokemonFilter={pokemonFilter} />
                         <ButtonTheme />
