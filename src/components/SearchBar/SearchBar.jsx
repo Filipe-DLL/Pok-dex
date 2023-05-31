@@ -11,7 +11,7 @@ export function SearchBar(props) {
     return (
         <Container theme={theme}>
             <FaSearch />
-            <Input onChange={(e) =>props.pokemonFilter(e.target.value.toLowerCase())} type={'Text'} placeholder={'Search...'} />
+            <Input onChange={(e) => props.pokemonFilter(e.target.value.toLowerCase())} type={'Text'} placeholder={'Search...'} />
         </Container>
     )
 }
