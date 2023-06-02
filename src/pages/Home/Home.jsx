@@ -1,90 +1,82 @@
-import { getAllPokemons, getPokemons } from "../../services/index";
-import { useContext, useEffect, useState } from "react";
-import { ButtonTheme } from "../../components/Button/ButtonTheme/ButtonTheme";
-import { Cards } from "../../components/Cards/Cards";
-import { SearchBar } from "../../components/SearchBar/SearchBar";
-import { ThemeContext } from "../../context/theme-context";
-import { Header, HomeContainer } from "./style";
-import { ButtonCarregarMais } from "../../components/Button/ButtonLoadMore/ButtonLoadMore";
-import ImgPokemon from "../../assets/pokemon.png"
 import axios from "axios";
+import { useContext, useEffect, useState } from "react";
+
+import { ThemeContext } from "../../context/theme-context";
+import { getAllPokemons, getPokemons } from "../../services/index";
+import ImgPokemon from "../../assets/pokemon.png";
+
+import { Header, HomeContainer } from "./style";
+
+import { LoadMoreButton } from "../../components/Button/LoadMoreButton/LoadMoreButton";
+import { ThemeButton } from "../../components/Button/ThemeButton/ThemeButton";
+import { PokemonCard } from "../../components/PokemonCard/PokemonCard";
+import { SearchBar } from "../../components/SearchBar/SearchBar";
 
 export function Home() {
 
     const { theme } = useContext(ThemeContext)
 
-    const [allPokemons, setAllPokemons] = useState([]);
+    const [cont, setCont] = useState({ limit: 10, offset: 1 })
+    const [allPokemons, setAllPokemons] = useState([])
     const [pokemons, setPokemons] = useState([])
-    const [cont, setCont] = useState(10)
 
     useEffect(() => {
         getAllPokemons()
             .then(response => setAllPokemons(response))
+            .catch(error => console.error(error))
+    }, [])
+
+    useEffect(() => {
         getPokemons(cont)
-            .then(response => setPokemons(response))
+            .then(response => setPokemons([...pokemons, ...response]))
+            .catch(error => console.error(error))
+        // eslint-disable-next-line
     }, [cont])
-
-    // function getAllPokemons() {
-    //     axios.get('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0').then(response => setAllPokemons(response))
-    // }
-
-    // function getPokemons(cont) {
-    //     let linkList = []
-    //     for (let i = 1; i <= cont; i++) {
-    //         linkList.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
-    //     }
-    //     setPokemons([])
-    //     axios.all(linkList.map(link => axios.get(link))).then(response => setPokemons(response))
-    // }
-
-    // function pokemonFilter(name) {
-    //     if (name !== '') {
-    //         let filteredPokemons = []
-    //         for (let i in allPokemons.data.results) {
-    //             if (allPokemons.data.results[i].name.includes(name)) {
-    //                 filteredPokemons.push(allPokemons.data.results[i])
-    //             }
-    //         }
-    //         axios.all(filteredPokemons.map(item => axios.get(item.url))).then(response => setPokemons(response))
-    //     } else {
-    //         getPokemons(cont)
-    //     }
-    // }
 
     function pokemonFilter(name) {
         if (name !== '') {
-            const filteredPokemons = allPokemons.filter(pokemon => pokemon.name.includes(name));
-            const pokemonPromises = filteredPokemons.map(item => axios.get(item.url));
+            const filteredPokemons = allPokemons.filter(pokemon => pokemon.name.includes(name))
+            const pokemonPromises = filteredPokemons.map(item => axios.get(item.url))
             axios.all(pokemonPromises)
                 .then(response => {
-                    const filteredPokemonsData = response.map(res => res.data);
+                    const filteredPokemonsData = response.map(res => res.data)
                     if (filteredPokemonsData.length === 0) {
-                        setPokemons([]);
-                        console.log('Nenhum Pokémon encontrado.');
+                        setPokemons([])
+                        console.log('Nenhum Pokémon encontrado.')
                     } else {
-                        setPokemons(filteredPokemonsData);
+                        setPokemons(filteredPokemonsData)
                     }
                 })
                 .catch(error => {
-                    console.error(error);
-                });
+                    console.error(error)
+                })
         } else {
+            setCont({ limit: 10, offset: 1 })
+            setPokemons([])
             getPokemons(cont)
                 .then(response => {
-                    setPokemons(response);
+                    setPokemons(response)
                 })
                 .catch(error => {
-                    console.error(error);
-                });
+                    console.error(error)
+                })
         }
     }
 
-    function carregarMais() {
-        if (cont >= 150) {
-            setCont((151))
+    function loadMore() {
+        //limitar em apenas os Pokemons da primeira geração 
+        if (cont.limit >= 151) {
+            return
+        } else if (cont.limit >= 140) {
+            setCont({ limit: 151, offset: 141 })
             return
         }
-        setCont((cont + 10))
+        // -------------------------------
+
+        setCont(prevCont => ({
+            limit: prevCont.limit + 10,
+            offset: prevCont.offset + 10
+        }))
     }
 
     return (
@@ -93,11 +85,11 @@ export function Home() {
                 <img height={'50px'} src={ImgPokemon} alt="POKEMON" />
                 <div>
                     <SearchBar pokemonFilter={pokemonFilter} />
-                    <ButtonTheme />
+                    <ThemeButton />
                 </div>
             </Header>
-            <Cards pokemons={pokemons} />
-            <ButtonCarregarMais carregarMais={carregarMais} />
+            <PokemonCard pokemons={pokemons} />
+            <LoadMoreButton loadMore={loadMore} />
         </HomeContainer>
     )
 }

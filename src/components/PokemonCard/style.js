@@ -31,7 +31,7 @@ export const Li = styled.li`
    `}
 
 
-    aspect-ratio 1/1;
+    aspect-ratio: 1/1;
     height: 240px;
     min-width: 240px;
     min-height: 240px;

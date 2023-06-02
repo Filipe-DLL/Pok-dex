@@ -1,13 +1,14 @@
 import { useContext } from "react"
 import { ThemeContext } from "../../../context/theme-context"
-import { ButtonContainer, StyledButton } from "./style"
+
 import { FaMoon } from "react-icons/fa"
 import { BsFillSunFill } from "react-icons/bs"
+import { ButtonContainer, StyledButton } from "./style"
 
 
-export function ButtonTheme() {
+export function ThemeButton() {
 
-    const {themes, theme, setTheme, setTemaAnterior } = useContext(ThemeContext)
+    const { themes, theme, setTheme, setTemaAnterior } = useContext(ThemeContext)
 
     return (
         <ButtonContainer>
@@ -16,7 +17,7 @@ export function ButtonTheme() {
                     setTemaAnterior(theme)
                     setTheme(theme === themes.light ? themes.dark : themes.light)
                 }}>
-                    {theme === themes.light ? <FaMoon /> : <BsFillSunFill />}
+                {theme === themes.light ? <FaMoon /> : <BsFillSunFill />}
             </StyledButton>
         </ButtonContainer>
     )

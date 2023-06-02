@@ -1,7 +1,7 @@
 import { TabList, TabPanel } from 'react-tabs';
 import styled from "styled-components";
 
-export const DetailsCard = styled.div`
+export const PokemonDetailsStyled = styled.div`
     background: ${props => props.theme.primary};
     color: ${props => props.theme.textColorSecondary};
 

@@ -10,7 +10,7 @@ export const ThemeProvider = (props) => {
     const [temaAnterior, setTemaAnterior] = useState([theme])
 
     return (
-        <ThemeContext.Provider value={{themes, theme, setTheme, temaAnterior, setTemaAnterior }}>
+        <ThemeContext.Provider value={{ themes, theme, setTheme, temaAnterior, setTemaAnterior }}>
             {props.children}
         </ThemeContext.Provider>
     )

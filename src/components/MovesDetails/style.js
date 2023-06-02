@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const UlMoves = styled.ul`
+export const MovesList = styled.ul`
     width: 100%;
     padding: 10px;
     

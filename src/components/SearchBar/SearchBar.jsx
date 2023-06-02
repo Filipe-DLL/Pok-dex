@@ -1,8 +1,8 @@
-import React from 'react'
-import { FaSearch } from 'react-icons/fa'
-import { Container, Input } from './style'
 import { useContext } from 'react'
 import { ThemeContext } from '../../context/theme-context'
+
+import { FaSearch } from 'react-icons/fa'
+import { Container, Input } from './style'
 
 export function SearchBar(props) {
 

@@ -1,7 +1,9 @@
 import axios from "axios"
 import { useContext, useEffect, useState } from "react"
-import { ContainerAbilities } from "./style";
+
 import { ThemeContext } from "../../context/theme-context";
+
+import { ContainerAbilities } from "./style";
 
 export function AbilitiesDetails(props) {
 
@@ -11,13 +13,13 @@ export function AbilitiesDetails(props) {
 
     useEffect(() => {
         getMoves()
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line
     }, [])
 
     function getMoves() {
         axios.all(props.props.map(item => axios.get(item.ability.url))).then(response => setAbilities(response))
     }
-    
+
     return (
         <ContainerAbilities theme={theme}>
             <h1>Abilities:</h1>
