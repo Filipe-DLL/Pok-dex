@@ -44,7 +44,6 @@ export function PokemonDetails() {
               <BackButton />
               <ThemeButton />
             </HeaderBar>
-            {console.log(pokemon.data)}
             <PokemonInfos pokemon={pokemon.data} />
             <PokemonSection theme={theme} themes={themes}>
 
